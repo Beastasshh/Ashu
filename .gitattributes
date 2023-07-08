@@ -1,2 +1,34 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class GfgProblem 
+{
+	public void gfg (int a, int b) 
+	{
+		Scanner sc = new Scanner(System.in);
+		int[] arr =new int [a];
+	    System.out.println("Enter the N Natural num of Array");
+	    for(int i=0;i<=arr.length-1;i++)
+	    {
+	    	arr [i]= sc.nextInt();    
+	    }
+	    Arrays.sort(arr);
+	    for(int j=arr.length-b; j<arr.length; j++) 
+	     {
+	    	 System.out.println(arr[j]+" ");
+	    	 
+	     }
+	}
+
+	 public static void main (String[] args ) 
+	 {
+		 int n,k;
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("enter num of N positive integers You want ");
+		 n= sc.nextInt();
+		 System.out.println("enter num of K largest elements from the array u want to print ");
+		 k= sc.nextInt();
+		 GfgProblem ob= new GfgProblem();
+		 ob.gfg(n,k);
+	 }
+}
